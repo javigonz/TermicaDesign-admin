@@ -1,0 +1,35 @@
+.main-menu_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 133px;
+  padding: 0 30px;
+}
+
+.main-menu_logo  {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.logoHighlight {
+  font-size: var(--bigger-size);
+  color: var(--primary-color);
+}
+
+.logoOverlight {
+  font-size: var(--bigger-size);
+  color: white;
+}
+
+.main-menu_nav {
+  margin: 30px 0;
+  color: white;
+}
+.main-menu_nav div {
+  font-size: 15px;
+}
+
+.navHighlight {
+  color: var(--primary-color);
+}
+
