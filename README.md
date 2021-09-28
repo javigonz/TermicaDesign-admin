@@ -14,7 +14,7 @@ Project running with:
 
 Clone the project
 
-<code>git clone https://github.com/javigonz/TermicaDesignAdmin.git
+<code>git clone https://github.com/javigonz/TermicaDesign-admin.git
 </code>
 
 Install dependencies (node v12.x is minimum requirement)

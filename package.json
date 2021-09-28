@@ -17,6 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws s3 sync ./build s3://$npm_config_S3Bucket && aws cloudfront create-invalidation --distribution-id $npm_config_AWSCloudfrontId --paths \"/*\" ",
     "test": "react-scripts test",
     "lint": "eslint . --ext .js",
     "eject": "react-scripts eject"
