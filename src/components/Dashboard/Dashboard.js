@@ -3,6 +3,7 @@ import { AccountContext } from "../Account";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  // eslint-disable-next-line no-unused-vars
   const [session, setSession] = useState();
 
   const { getSession } = useContext(AccountContext);
@@ -15,7 +16,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <p>Dashboard content ...${session}</p>
+      <p>Dashboard content ...</p>
     </div>
   );
 };
