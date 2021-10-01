@@ -13,7 +13,7 @@ function Login({ onLoginSuccess }) {
     getSession().then((session) => {
       onLoginSuccess(session, logout);
     });
-  }, []);
+  }, [getSession, logout, onLoginSuccess]);
 
   const onSubmit = (event) => {
     event.preventDefault();

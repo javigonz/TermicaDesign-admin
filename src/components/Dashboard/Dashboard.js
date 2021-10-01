@@ -11,11 +11,11 @@ const Dashboard = () => {
     getSession().then((session) => {
       setSession(session);
     });
-  }, []);
+  }, [getSession]);
 
   return (
     <div>
-      <a>Dashboard content ...</a>
+      <p>Dashboard content ...${session}</p>
     </div>
   );
 };
