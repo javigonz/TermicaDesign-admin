@@ -43,7 +43,7 @@ function App() {
           exact={true}
           render={(props) => (
             <Account>
-              <LayoutAdmin>
+              <LayoutAdmin session={session}>
                 <Signup {...props}> </Signup>
               </LayoutAdmin>
             </Account>
