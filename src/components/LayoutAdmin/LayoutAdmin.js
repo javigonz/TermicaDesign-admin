@@ -2,10 +2,10 @@ import React from "react";
 import "./LayoutAdmin.css";
 import MenuAdmin from "../MenuAdmin";
 
-function LayoutAdmin({ children }) {
+function LayoutAdmin({ children, session }) {
   return (
     <div className="main">
-      <MenuAdmin />
+      <MenuAdmin session={session} />
       <div className="main-content">{children}</div>
     </div>
   );

@@ -35,14 +35,6 @@
   letter-spacing: 0px;
   letter-spacing: 0.02rem;
 }
-.subtitle a {
-  color: white;
-  text-decoration: none;
-}
-
-.subtitle a:hover {
-  color: var(--primary-color);
-}
 
 input {
   border: none;

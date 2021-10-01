@@ -1,37 +1,28 @@
-import React, { useState, useContext, useEffect } from "react";
-import { AccountContext } from "../Account";
+import React, { useState } from "react";
+import UserPool from "../../config/userPool";
+import "./Signup.css";
 
-import "./Login.css";
-
-function Login({ onLoginSuccess }) {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const { authenticate, logout, getSession } = useContext(AccountContext);
-
-  useEffect(() => {
-    getSession().then((session) => {
-      onLoginSuccess(session, logout);
-    });
-  }, []);
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-    authenticate(email, password)
-      .then((data) => {
-        onLoginSuccess(data, logout);
-      })
-      .catch((err) => {
-        console.error("Failed to login", err);
-      });
+    UserPool.signUp(email, password, [], null, (err, data) => {
+      if (err) {
+        console.error("SIGNUP KO --> ", err);
+      }
+    });
   };
 
   return (
     <div className="window">
       <div className="content">
-        <div className="welcome">Hello Again!!</div>
-        <div className="subtitle">Login in TermicaDesign Admin</div>
+        <div className="welcome">Register New User</div>
+        <div className="subtitle">
+          Create a new user into TermicaDesign Admin
+        </div>
         <form onSubmit={onSubmit}>
           <div className="input-fields">
             <input
@@ -50,16 +41,13 @@ function Login({ onLoginSuccess }) {
           </div>
           <div className="center">
             <button type="submit" className="ghost-round middle-width">
-              LogIn
+              Signup
             </button>
           </div>
         </form>
-        <div className="subtitle">
-          <a href="/signup">or SignIn another user</a>
-        </div>
       </div>
     </div>
   );
-}
+};
 
-export default Login;
+export default Signup;
