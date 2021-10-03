@@ -1,0 +1,16 @@
+
+.main-footer  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 133px;
+  padding: 0 30px;
+  color: var(--verylightgrey-color);
+}
+
+
+.main-footer-info {
+  margin: auto;
+  width: 100%;
+  font-size: var(--small-size);
+}
